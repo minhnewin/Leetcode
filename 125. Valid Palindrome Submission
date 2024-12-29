@@ -1,0 +1,11 @@
+import re
+
+class Solution(object):
+    def isPalindrome(self, s):
+        s = s.lower()
+        s = re.sub(r'\W+', '', s)
+        s = s.replace("_","")
+
+        if s[::-1] == s or s == "":
+            return True
+        return False
